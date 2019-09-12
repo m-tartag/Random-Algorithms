@@ -1,6 +1,10 @@
 function destroyer(arr) {
   // Remove all the values
+
+  // Grab Arguments
   const args = Array.from(arguments);
+
+  // filter array for values != arguments
 
   console.log(
     arr.filter(function(element) {
