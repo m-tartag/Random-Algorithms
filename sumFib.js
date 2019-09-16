@@ -1,31 +1,16 @@
-// function fibby(num) {
-//   if (num <= 1) {
-//     return 1;
-//   }
-//   return fibby(num - 1) + fibby(num - 2);
-// }
+function sumFibs(num) {
+  const FIBBY = [];
+  FIBBY[0] = 1;
+  FIBBY[1] = 1;
+  let COUNTER = 1;
 
-// function sumFibs(num) {
-//   if (num <= 1) {
-//     return 1;
-//   }
-//   return sumFibs(num - 1) + sumFibs(num - 2);
-// }
-
-// console.log(sumFibs(8));
-
-function whileFib(num) {
-  let A = 0;
-  let B = 1;
-  let store;
-
-  while (num >= 0) {
-    store = A;
-    A += B;
-    B = store;
-    num--;
+  for (let i = 1; FIBBY[i] <= num; i++) {
+    FIBBY[i + 1] = FIBBY[i] + FIBBY[i - 1];
+    if (FIBBY[i] % 2 !== 0) {
+      COUNTER += FIBBY[i];
+    }
   }
-  return B;
+  return COUNTER;
 }
 
-console.log(whileFib(10));
+console.log(sumFibs(10));

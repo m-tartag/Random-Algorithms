@@ -8,16 +8,14 @@ function challenge(month, year) {
     year,
   };
 
-  console.log(
-    Math.abs(
-      TODAY.year >= TARGET.year
-        ? TODAY.year - TARGET.year + (TODAY.month / 12 - TARGET.month / 12)
-        : TARGET.year - TODAY.year + (TARGET.month / 12 - TODAY.month / 12)
-    ).toFixed(2)
-  );
+  return Math.abs(
+    TODAY.year >= TARGET.year
+      ? TODAY.year - TARGET.year + (TODAY.month / 12 - TARGET.month / 12)
+      : TARGET.year - TODAY.year + (TARGET.month / 12 - TODAY.month / 12)
+  ).toFixed(2);
 }
 
-challenge(10, 2018);
+console.log(challenge(10, 2020));
 
 // const TOTAL_TODAY = TODAY.month * 30 + TODAY.year * 365;
 // const TOTAL_TARGET = TARGET.month * 30 + TARGET.year * 365;
