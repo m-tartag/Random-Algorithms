@@ -1,7 +1,5 @@
 function sumFibs(num) {
-  const FIBBY = [];
-  FIBBY[0] = 1;
-  FIBBY[1] = 1;
+  const FIBBY = [1, 1];
   let COUNTER = 1;
 
   for (let i = 1; FIBBY[i] <= num; i++) {
@@ -13,4 +11,4 @@ function sumFibs(num) {
   return COUNTER;
 }
 
-console.log(sumFibs(10));
+console.log(sumFibs(1000));
