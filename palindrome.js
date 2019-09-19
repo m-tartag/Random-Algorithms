@@ -7,4 +7,4 @@ function checkPalindrome(inputString) {
   );
 }
 
-console.log(checkPalindrome('aabba'));
+console.log(checkPalindrome('aabbaa'));
