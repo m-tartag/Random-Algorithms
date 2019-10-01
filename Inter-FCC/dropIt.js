@@ -3,6 +3,7 @@ function dropElements(arr, func) {
   for (let i = 0; i < arguments[0].length; i++) {
     if (func(arguments[0][i])) {
       arr.shift();
+      break;
     }
   }
   return arr;
