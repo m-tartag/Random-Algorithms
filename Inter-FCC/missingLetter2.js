@@ -9,4 +9,4 @@ function fearNotLetter(str) {
   return undefined;
 }
 
-console.log(fearNotLetter('abde'));
+console.log(fearNotLetter('abce'));
