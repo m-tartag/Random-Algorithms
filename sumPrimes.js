@@ -1,22 +1,21 @@
-function sumPrimes(num) {
-  const numbers = [];
-
-  // create an array of numbers up to and including num
-  for (let i = 2; i <= num; i++) {
-    numbers.push(i);
+function PRIME_OR_NOT(num) {
+  for (let i = 2; i < num; i++) {
+    if (num % i === 0) {
+      return false;
+    }
   }
-
-  // filter all numbers in the 'numbers' array, that are not divisible by any number other than themselves without a remainder
-  return numbers
-    .filter(function(item, index, array) {
-      for (let j = 0; j < index; j++) {
-        if (item % array[j] === 0) return false;
-      }
-      return true;
-
-      // sum up all numbers in the filtered array (primes)
-    })
-    .reduce(function(a, b) {
-      return a + b;
-    });
+  return true;
 }
+
+function SUM_PRIMES(num) {
+  let COUNTER = 0;
+
+  for (let i = 2; i <= num; i++) {
+    if (PRIME_OR_NOT(i)) {
+      COUNTER += i;
+    }
+  }
+  return COUNTER;
+}
+
+console.log(SUM_PRIMES(977));
